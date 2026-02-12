@@ -1,0 +1,105 @@
+<style>
+    .carousel-wrapper {
+      position: relative;
+      max-width: 12000px;
+      margin: auto;
+      overflow: hidden;
+    }
+    
+    .carousel-track {
+      display: flex;
+      transition: transform 0.45s ease;
+    }
+    
+    .carousel-slide {
+      min-width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    
+    .carousel-slide img {
+      width: 100%;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    
+    .carousel-slide img:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.15);
+    }
+    
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+      font-size: 18px;
+      border-radius: 6px;
+      transition: background 0.2s ease;
+      z-index: 2;
+    }
+    
+    .carousel-btn:hover {
+      background: rgba(0,0,0,0.65);
+    }
+    
+    .prev { left: 10px; }
+    .next { right: 10px; }
+    </style>
+    
+    <div class="carousel-wrapper">
+      <div class="carousel-track" id="carouselTrack">
+    
+        <div class="carousel-slide">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeX3mtmB6YbaeULX9Fn8fr3fxIEnobz5C1K56D-o4lT5PLBLw/viewform" target="_blank">
+            <img src="https://raw.githubusercontent.com/sidjey-y/globe-assets/main/business/01%20AIG.png">
+          </a>
+          <a href="FORM_LINK_AI" target="_blank">
+            <img src="https://raw.githubusercontent.com/sidjey-y/globe-assets/main/business/02%20AI.png">
+          </a>
+          <a href="FORM_LINK_CLSG" target="_blank">
+            <img src="https://raw.githubusercontent.com/sidjey-y/globe-assets/main/business/03%20CLSG.png">
+          </a>
+        </div>
+    
+        <div class="carousel-slide">
+          <a href="FORM_LINK_FA" target="_blank">
+            <img src="https://raw.githubusercontent.com/sidjey-y/globe-assets/main/business/04%20F%26A.png">
+          </a>
+          <a href="FORM_LINK_HR" target="_blank">
+            <img src="https://raw.githubusercontent.com/sidjey-y/globe-assets/main/business/05%20HR.png">
+          </a>
+          <a href="FORM_LINK_ISDP" target="_blank">
+            <img src="https://raw.githubusercontent.com/sidjey-y/globe-assets/main/business/06%20ISDP.png">
+          </a>
+        </div>
+    
+        <div class="carousel-slide">
+          <a href="FORM_LINK_SCC" target="_blank">
+            <img src="https://raw.githubusercontent.com/sidjey-y/globe-assets/main/business/07%20SCC.png">
+          </a>
+        </div>
+    
+      </div>
+    
+      <button class="carousel-btn prev" onclick="moveSlide(-1)">‹</button>
+      <button class="carousel-btn next" onclick="moveSlide(1)">›</button>
+    </div>
+    
+    <script>
+    let index = 0;
+
+    function moveSlide(direction) {
+      const track = document.getElementById("carouselTrack");
+      const total = track.children.length;
+      index = (index + direction + total) % total;
+      track.style.transform = `translateX(-${index * 100}%)`;
+    }
+    </script>
+    
