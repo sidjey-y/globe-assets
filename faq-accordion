@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: transparent;
+      margin: 0;
+      padding: 16px;
+      color: #2f3786;
+      line-height: 1.7;
+    }
+
+    .faq-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h2.section-title {
+      color: #2f3786;
+      font-size: 18px;
+      font-weight: 700;
+      margin: 40px 0 20px;
+      letter-spacing: 0.5px;
+      position: relative;
+      padding-left: 16px;
+    }
+
+    h2.section-title:first-child {
+      margin-top: 0;
+    }
+
+    h2.section-title::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 4px;
+      width: 4px;
+      height: 20px;
+      background: linear-gradient(180deg, #2f3786 0%, #4a54b8 100%);
+      border-radius: 2px;
+    }
+
+    .accordion {
+      background-color: #ffffff;
+      color: #2f3786;
+      cursor: pointer;
+      padding: 22px 24px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 12px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
+      box-shadow: 0 4px 14px rgba(47, 55, 134, 0.08);
+      font-family: 'Poppins', sans-serif;
+      gap: 16px;
+    }
+
+    .accordion:hover {
+      background-color: #f5f7ff;
+      box-shadow: 0 8px 24px rgba(47, 55, 134, 0.12);
+    }
+
+    .accordion.active {
+      background-color: #f5f7ff;
+      box-shadow: 0 6px 20px rgba(47, 55, 134, 0.1);
+    }
+
+    .accordion::after {
+      content: "+";
+      font-size: 22px;
+      font-weight: 600;
+      color: #2f3786;
+      transition: transform 0.25s ease;
+      flex-shrink: 0;
+    }
+
+    .accordion.active::after {
+      content: "−";
+    }
+
+    .panel {
+      background-color: #ffffff;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease;
+      margin-bottom: 10px;
+      border-radius: 0 0 12px 12px;
+      box-shadow: 0 8px 18px rgba(47, 55, 134, 0.05);
+    }
+
+    .panel p {
+      margin: 0;
+      padding: 18px 24px 26px;
+      font-size: 15px;
+      color: #2f3786;
+      opacity: 0.95;
+      line-height: 1.75;
+    }
+
+    strong {
+      font-weight: 600;
+      color: #2f3786;
+    }
+  </style>
+</head>
+<body>
+  <div class="faq-container">
+    <h2 class="section-title">About iCX & Our Purpose</h2>
+    <button class="accordion">So, what exactly is iCX?</button>
+    <div class="panel">
+      <p>iCX stands for <strong>Internal Customer Experience</strong>. It is a survey designed to measure the experience that we deliver to and receive from one another, inside Globe, as we go about our work. iCX recognizes that every one of us is both a customer and a service provider. <br><br> We are each other's customers, and it matters how we treat each other, because we take that energy and empathy with us when we serve our customers. That's what we call the principle of <strong>"Mirrored Experience"</strong>, and it is the core conviction of iCX. It tells us that we will be best able to deliver exceptional service to our external customers if we first practice it first amongst ourselves. We can't deliver a great experience outside if we aren't feeling it inside! iCX is about ensuring that, as every Ka-Globe goes about their work, they are treated with the same dignity, respect, and kindness that we promise to every Filipino.</p>
+    </div>
+    <button class="accordion">Why are we doing this?</button>
+    <div class="panel">
+      <p>To win customers for life, we have to win <strong>you</strong> for life first!. By measuring how we serve each other, we can spot the "friction" that slows us down and turn it into flow. This internal service excellence is the fuel we need to hit our <strong>80-50-30</strong> aspiration.</p>
+    </div>
+
+    <h2 class="section-title">About the Survey</h2>
+    <button class="accordion">What's in it for me?</button>
+    <div class="panel">
+      <p>This is <strong>your moment to be heard!</strong> You'll get to give real, honest feedback on your collaborations. You'll identify the value you deliver (as a service provider) and the "acts of care" you receive (as an internal customer). It's about highlighting what works and fixing the processes that don't, so we can continue to empower Filipino lives.</p>
+    </div>
+    <button class="accordion">How different is this from other surveys?</button>
+    <div class="panel">
+      <p>The iCX Survey is laser-focused on operations and service delivery. It asks: Are we helping each other succeed in our day-to-day work? Are our internal interactions creating value or roadblocks? It is about the specific actions and outputs shared between teams, and how well those contribute to our 80-50-30 outcomes</p>
+    </div>
+    <button class="accordion">Who should answer this?</button>
+    <div class="panel">
+      <p><strong>You!</strong> We are calling on <strong>all regular Ka-Globe employees</strong> across all groups. Everyone serves someone, and everyone receives service as well. Your piece of the puzzle is critical to understanding the whole organization's health.</p>
+    </div>
+    <button class="accordion">Is this required?</button>
+    <div class="panel">
+      <p>It's not mandatory, but <strong>we highly encourage it!</strong> To make meaningful changes to your work life, we need a "statistically significant" voice from every group. Your participation directly shapes the Action Planning phase; so if you want to see improvements, help us get the data to back it up!</p>
+    </div>
+
+    <h2 class="section-title">Logistics & Data Privacy</h2>
+    <button class="accordion">Will the responses be confidential?</button>
+    <div class="panel">
+      <p>Absolutely. We stick to the Data Privacy Act and prioritize your psychological safety. Only your designated SET partners see the raw data and will treat it with utmost confidentiality. When we present the insights to leaders for action planning, <strong>all data will be anonymized</strong>. We want you to be honest and candid without fear; your dignity and privacy are our priority.</p>
+    </div>
+    <button class="accordion">Until when can I answer the survey?</button>
+    <div class="panel">
+      <p>The portal will remain open until <strong>&lt;&gt;</strong>. Don't wait for the last minute!</p>
+    </div>
+    <button class="accordion">Are my responses saved automatically?</button>
+    <div class="panel">
+      <p>Yes! Since we're using Google Forms, <strong>your draft is saved automatically</strong> as long as you're logged into your Globe email. Just remember: it doesn't count until you hit that "<strong>Submit</strong>" button at the very end!</p>
+    </div>
+    <button class="accordion">Who do I contact if I have trouble with the survey?</button>
+    <div class="panel">
+      <p>If the tech is acting up, don't worry. Just reach out to <strong>&lt;&gt;</strong>, and we'll get you sorted out.</p>
+    </div>
+  </div>
+
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+  </script>
+</body>
+</html>
